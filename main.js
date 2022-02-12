@@ -99,3 +99,26 @@ form3.addEventListener('submit', function(e) {
     console.log(options, numb2, numb1, result3)
 
 })
+
+/* add users */
+
+var form4 = document.querySelector('.form4');
+var list = document.querySelector('.list');
+
+
+
+
+
+function addUsers() {
+
+    var user = document.querySelector('.name').value;
+    var lastName = document.querySelector('.lastName').value;
+    var number = document.querySelector('.number').value;
+    var email = document.querySelector('.email').value;
+    var entry = document.querySelector('.result4');
+
+    entry.appendChild(document.createTextNode(user+ '' + lastName + '' + number + '' + email));
+    list.appendChild(entry);
+}
+
+
