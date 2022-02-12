@@ -42,4 +42,60 @@ form2.addEventListener('submit', function(e) {
     result2.innerHTML = res2
     console.log(res2)
 
+});
+
+
+   // calculate
+
+var form3 = document.querySelector('.form3')
+var calculate = document.querySelector('.calculate')
+
+// var plus = document.querySelector('.plus')
+// var minus = document.querySelector('.minus')
+// var device = document.querySelector('.device')
+// var multiply = document.querySelector('.multiply')
+
+
+function minusNumbers(numb1, numb2) {
+    if(numb1, numb2) {
+        return numb1 - numb2
+    }
+}
+
+function deviceNumbers(numb1, numb2) {
+    if(numb1, numb2) {
+        return numb1 / numb2
+    }
+}
+function multiplyNumbers(numb1, numb2) {
+    if(numb1, numb2) {
+        return numb1 * numb1 
+    }
+}
+
+form3.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    var options = document.querySelector('#options').value
+    var numb1 = +document.querySelector('.numb1').value;
+    var numb2 = +document.querySelector('.numb2').value;
+    var result3 = document.querySelector('.result3');
+
+
+
+    if(options == 'plus') {
+        result3.innerHTML = addNumbers(numb1, numb2)
+    }
+    else if(options == 'minus') {
+        result3.innerHTML = minusNumbers(numb1, numb2)
+    }
+    else if(options == 'device') {
+        result3.innerHTML = deviceNumbers(numb1, numb2)
+    }
+    else {
+        result3.innerHTML = multiplyNumbers(numb1, numb2)
+    }
+
+    console.log(options, numb2, numb1, result3)
+
 })
