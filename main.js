@@ -101,24 +101,14 @@ form3.addEventListener('submit', function(e) {
 })
 
 /* add users */
+var result4 = document.querySelector('.result4');
 
-var form4 = document.querySelector('.form4');
-var list = document.querySelector('.list');
+document.getElementById('mybtn').onclick = function(){
 
+    var myName = document.getElementById('myText').value; 
 
-
-
-
-function addUsers() {
-
-    var user = document.querySelector('.name').value;
-    var lastName = document.querySelector('.lastName').value;
-    var number = document.querySelector('.number').value;
-    var email = document.querySelector('.email').value;
-    var entry = document.querySelector('.result4');
-
-    entry.appendChild(document.createTextNode(user+ '' + lastName + '' + number + '' + email));
-    list.appendChild(entry);
-}
+    result4.innerHTML = myName;
+    console.log( myName );
+ };
 
 
